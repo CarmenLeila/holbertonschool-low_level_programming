@@ -5,15 +5,15 @@
  * Return:0 (Success)
  */
 int main(void)
-{       char  C;
-	int I;
-	long int B;
-	long long int H;
-	float F;
-	 printf("Size of a char: %lu byte(s)\n",(unsigned long) sizeof(C));                                                                      
-	 printf("Size of an int: %lu byte(s)\n",(unsigned long) sizeof(I));                                                                       
-	 printf("Size of a long int: %lu byte(s)\n",(unsigned long) sizeof(B));                                                              
-         printf("Size of a long long int: %lu byte(s)\n",(unsigned long) sizeof(H));                                                     
-         printf("Size of a float: %lu byte(s)\n",(unsigned long) sizeof(F));                                                                    
-                 return (0);                                                                                                             
+{       char c;
+	int i;
+	long int b;
+	long long int h;
+	float f;
+	printf("Size of a char: %lu byte(s)\n",sizeof (c));
+        printf("size of an int: %lu byte(s)\n",sizeof (i));
+        printf("size of a long int: %lu byte(s)\n",sizeof (b));
+        printf("size of a long long int: %lu byte(s)\n",sizeof (h));
+        printf("size of a float: %lu byte(s)\n",sizeof (f));
+                   result(0);	
 }
