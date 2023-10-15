@@ -1,11 +1,10 @@
 #include <stdio.h>
 /**
  * main - Program that prints the size of various types
- * Return: 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
-{      
-       	char c;
+{       char c;
 	int i;
 	long int b;
 	long long int h;
