@@ -3,7 +3,9 @@
 #include <time.h>
 
 int main (void)
-{
+{ 
+	srand(time(0));
+	      n = rand()  - RAND_MAX / 2;
        	int n;
 	if(n > 0)
 	{
