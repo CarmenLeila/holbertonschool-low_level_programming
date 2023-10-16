@@ -4,12 +4,12 @@
 
 int main (void)
 {
-	 int n;
-	if(n>0)
+       	int n;
+	if(n > 0)
 	{
       	 printf("the number is positive\n");
 	} 
-       if else(n==0);
+       else if(n == 0);
        {
          printf("the number is zero\n");
        } 
@@ -18,3 +18,4 @@ int main (void)
          printf("the number is negative\n");
        }
        return 0 ;
+} 
