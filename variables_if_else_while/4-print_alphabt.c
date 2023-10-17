@@ -10,6 +10,10 @@
 int main(void)
 {
 	char d, e, q;
+
+	q = 'q';
+	e = 'e';
+
 	for (d = 'a'; d <= 'z' ; d++)
 	{
 	if (d != q && d != e)
