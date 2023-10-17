@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main -Program that prints all the numbers of base 16
  * Return:Always 0 (Success)
@@ -13,7 +14,7 @@ int main(void)
 		putchar ('0' + c);
 		if (c != 9)
 		{
-			putchar (20);
+			putchar (35);
 			putchar (' ');
 		}
 	}
