@@ -14,7 +14,7 @@ int main(void)
 		putchar ('0' + c);
 		if (c != 9)
 		{
-			putchar (35);
+			putchar (44);
 			putchar (' ');
 		}
 	}
