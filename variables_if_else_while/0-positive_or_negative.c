@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * main -Program that assign a random number                                     * Return: Always 0 (Success)                                         
+ * main -Program that assign a random number                                     
+ * Return: Always 0 (Success)                                         
  */  
 int main(void)
 {
