@@ -2,9 +2,9 @@
 
 int main(void)
 {
-	int c=250;
+	int c = 250;
 
-	putchar (“%x”, a);
+	putchar (“ %x ”, a);
 	putchar (“\n”);
-	putchar (“%x”, c);
-return 0;
+	putchar (“ %x ”, c);
+return (0);
