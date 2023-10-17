@@ -9,6 +9,15 @@
 
 int main(void)
 {
-	 printf("_putchar\n");
+	char d, e, q;
+	e = 'e';
+	q = 'q';
+
+	for (d = 'a'; d <= 'z' ; d++)
+	{
+	if (d !=q && d !=e)
+	putchar(d);
+	}
+	putchar('\n');
 return (0);
 }
