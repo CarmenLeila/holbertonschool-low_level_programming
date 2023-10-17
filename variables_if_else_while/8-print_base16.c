@@ -2,9 +2,17 @@
 
 int main(void)
 {
-	int c = 250;
+	int c = 0;
 
-	putchar (“%x”, c);
+	for (c = 0;c <= 9;c++)
+	{
+		putchar ('0' + c);
+		if (c != 9)
+		{
+			putchar (20);
+			putchar (' ');
+		}
+	}
 	putchar (“\n”);
-	putchar (“%x”, c);
 return (0);
+}
