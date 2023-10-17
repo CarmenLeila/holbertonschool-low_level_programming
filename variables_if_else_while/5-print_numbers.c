@@ -15,7 +15,7 @@ int main(void)
 		printf("%d", n);
 		if (n < 9)
 		{
-			printf(", ");
+			printf();
 		}
 	}
 	    printf("\n");
