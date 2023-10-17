@@ -9,14 +9,14 @@
 int main(void)
 {
 	int n;
-	for (n = 0; n< 10; n++)
+	for (n = 0; n < 10; n++)
 	{
 		printf("%d", x);
 		if (n < 9)
 		{
 			printf(", ");
-					        }
-		    }
+		}
+	}
 	    printf("\n");
 	    return (0);
-} 
+}
