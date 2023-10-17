@@ -4,7 +4,7 @@ int main(void)
 {
 	int c = 250;
 
-	putchar (“ %x ”, a);
+	putchar (“%x”, c);
 	putchar (“\n”);
-	putchar (“ %x ”, c);
+	putchar (“%x”, c);
 return (0);
