@@ -10,6 +10,7 @@
 void print_alphabet_x10(void)
 {
 	int c = 0, l = 0;
+
 	for (l = 0; l < 10; l++)
 	{
 		while ('a' + c <= 'z')
@@ -18,6 +19,6 @@ void print_alphabet_x10(void)
 			c++;
 		}
 		putchar('\n');
-		c=0;
+		c = 0;
 	}
 }
