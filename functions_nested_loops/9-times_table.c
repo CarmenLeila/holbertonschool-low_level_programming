@@ -7,5 +7,7 @@
  * Return: Always 0.
  */
 
-int main(void)
+void times_table(void)
 {
+	int i = 0, n = 0, m = 0, max = 9;
+
