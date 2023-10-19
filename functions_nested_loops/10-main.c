@@ -4,10 +4,15 @@
 /**
  * add - adds two integers and returns the result
  *
- * Return: Always the addition of two integers
+ * Return: Always 0.
  */
 
-int add(int m,int n)
+int add(void)
 {
-	return(m + n);
+	int n;
+	
+	n = add(89, 9);
+	printf("%d\n", n);
+	return (0);
+
 }
