@@ -8,9 +8,9 @@
  * Return:1 if c is lowercase or  0 otherwise
  */
 
-int __islower(char C)
+int _islower(char C)
 {
-	if (C >= 'a' && C <= 'a')
+	if (C >= 'a' && C <= 'z')
 	{
 		return (1);
 	}
