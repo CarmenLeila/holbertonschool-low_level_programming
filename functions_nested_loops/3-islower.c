@@ -4,13 +4,13 @@
 
 /**
  * _islower -checks for lowercase character
- * @C:is a character passed in parameters
+ * @c:is a character passed in parameters
  * Return:1 if c is lowercase or  0 otherwise
  */
 
-int _islower(char C)
+int _islower(char c)
 {
-	if (C >= 'a' && C <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
