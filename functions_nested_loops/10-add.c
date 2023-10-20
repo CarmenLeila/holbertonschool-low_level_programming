@@ -8,7 +8,8 @@
   * Return: Always the addition of @m and @n
   */
 
-int add(int m, int n)
+int main(void)
 {
+
 	return (m + n);
 }
