@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
+void print_digit(int);
+
 /**
  * times_table - prints the 9 times table
  *
@@ -10,11 +12,13 @@
 void times_table(void)
 {
 	int i = 0, n = 0, m = 0, max = 9;
+
 	for (n = 0; n <= max; n++)
 	{
 		for (m = 0; m <= max; m++)
 		{
 			int num = 0, d1 = 0, d2 = 0, d3 = 0;
+
 			num = m * i;
 			d3 = num % 10;
 			d2 = (num - d3) / 10;
