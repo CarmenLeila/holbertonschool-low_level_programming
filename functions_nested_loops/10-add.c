@@ -2,14 +2,13 @@
 #include "main.h"
 
  /**
-  * add - adds two integers
+  * add - add two integers
   *
-  * Description:add is a function that adds two integers and returns the result
-  * @m: is the first parameter
+  * @m: my first integer
   *
-  * @n: is the second parameter
+  * @n: my second integer
   *
-  * Return: Always the addition of @m and @n
+  * Return: sum of @m and @n
   */
 int add(int m, int n)
 {
