@@ -1,34 +1,44 @@
 #include "main.h"
 
 /**
- * print_multiple_fizz_buzz - function
- *
+ * main - test code
+ * Return: Always 0 (success)
+ */
+
+int main(void)
+{
+	print_multiple_fizz_buzz();
+	return (0);
+}
+
+/**
+ * print_multiple_fizz_buzz - function prints the numbers from 1 to 100
  * Return: nothing
  */
 
 void print_multiple_fizz_buzz(void)
 {
-	int i = 0;
+	int n = 0;
 	
-	for (i = 1; i <= 100; i++)
+	for (n = 1; n <= 100; n++)
 	{
-		if ((i % 5 == 0) && (i % 3 == 0))
+		if ((n % 5 == 0) && (n % 3 == 0))
 		{
 			printf("FizzBuzz");
 		}
-		else if (i % 5 == 0)
+		else if (n % 5 == 0)
 		{
 			printf("Buzz");
 		}
-		else if (i % 3 == 0)
+		else if (n % 3 == 0)
 		{
 			printf("Fizz");
 		}
 		else
 		{
-			printf("%d", i);
+			printf("%d", n);
 		}
-		if (i < 100)
+		if (n < 100)
 		{
 			printf(" ");
 		}
