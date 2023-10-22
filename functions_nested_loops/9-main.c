@@ -1,15 +1,13 @@
 #include "main.h"
 
-void print_digit(int);
-
 /**
- *  times_table - function that prints the 9 times table
+ * main - check the code
  *
  * Return: Always 0.
  */
 
-void times_table(void)
+int main(void)
 {
-	    times_table();
-	        return (0);
+	times_table();
+	return (0);
 }

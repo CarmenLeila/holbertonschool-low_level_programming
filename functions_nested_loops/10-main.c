@@ -2,17 +2,16 @@
 #include <stdio.h>
 
 /**
- * add - adds two integers and returns the result
+ * main - check the code
  *
  * Return: Always 0.
  */
 
-int add(void)
+int main(void)
 {
 	int n;
 	
 	n = add(89, 9);
 	printf("%d\n", n);
 	return (0);
-
 }

@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
-int add(int, int);
-
- /**
+/**
   * add - add two integers
   *
-  * @m:first integer
+  * @m: first integer
   *
-  * @n:second integer
+  * @n: second integer
   *
   * Return: sum of integers
   */
