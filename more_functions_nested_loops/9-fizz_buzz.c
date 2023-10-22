@@ -19,7 +19,7 @@ int main(void)
 void print_multiple_fizz_buzz(void)
 {
 	int n = 0;
-	
+
 	for (n = 1; n <= 100; n++)
 	{
 		if ((n % 5 == 0) && (n % 3 == 0))
