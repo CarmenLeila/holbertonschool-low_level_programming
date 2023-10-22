@@ -6,7 +6,7 @@ void print_digit(int);
 /**
  * times_table - prints the 9 times table
  *
- * Return: Always 0.
+ * Return: Nothing
  */
 
 void times_table(void)
@@ -23,6 +23,7 @@ void times_table(void)
 			d3 = num % 10;
 			d2 = (num - d3) / 10;
 			d1 = (num - (d2 * 10)) / 10;
+
 			if (num != 0)
 			{
 				print_digit(d1);
@@ -30,17 +31,16 @@ void times_table(void)
 			}
 			else if (m != 0)
 			{
-				_putchar(' ');
-				_putchar(' ');
+				putchar(' ');
+				putchar(' ');
 			}
-			_putchar('0' + d3);
-			_putchar('0' + d3);
+			putchar('0' + d3);
 			if (m != max)
 			{
-				_putchar(',');
+				putchar(',');
 			}
 		}
-		_putchar('\n');
+		putchar('\n');
 		m = 0;
 		i++;
 	}
@@ -56,10 +56,10 @@ void print_digit(int d)
 {
 	if  (d == 0)
 	{
-		_putchar(' ');
+		putchar(' ');
 	}
 	else
 	{
-		_putchar('0' + d);
+		putchar('0' + d);
 	}
 }
