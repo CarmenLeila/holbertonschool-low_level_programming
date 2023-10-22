@@ -3,6 +3,8 @@
 
  /**
   * add - adds two integers
+  *
+  * Description:add is a function that adds two integers and returns the result
   * @m: is the first parameter
   *
   * @n: is the second parameter
