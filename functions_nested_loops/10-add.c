@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include "main.h"
 
+int add(int, int);
+
  /**
   * add - add two integers
   *
-  * @m: my first integer
+  * @m:first integer
   *
-  * @n: my second integer
+  * @n:second integer
   *
   * Return: sum of integers
   */
+
 int add(int m, int n)
 {
 
