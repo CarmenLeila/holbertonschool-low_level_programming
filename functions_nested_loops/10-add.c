@@ -8,7 +8,7 @@
   *
   * @n: my second integer
   *
-  * Return: sum of @m and @n
+  * Return: sum of integers
   */
 int add(int m, int n)
 {
