@@ -16,7 +16,7 @@ void rev_string(char *s)
 		men++;
 	}
 	len = i + 1;
-	Car = s;
+	men = s;
 	for (i = 0; i < len / 2; i++)
 	{
 		char x;
