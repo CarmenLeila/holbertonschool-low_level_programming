@@ -20,6 +20,7 @@ void rev_string(char *s)
 	for (i = 0; i < len / 2; i++)
 	{
 		char x;
+
 		x = *men;
 		*men = *Car;
 		*Car = x;
