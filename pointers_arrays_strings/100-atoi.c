@@ -13,21 +13,21 @@ int _atoi(char *s)
 	int firmar = 1;
 	int i = 0, res = 0;
 
-	while (*(s+i))
+	while (*(s + i))
 	{
-		while (*(s+i) == '-')
+		while (*(s + i) == '-')
 		{
 			firmar *= -1;
 			i++;
-			if(!((*(s+i) <= '9' && *(s+i) >= '0') || (*(s+i) == ' ') || (*(s+i) == ' ') || (*(s+i) == '+')))
+			if(!((*(s + i) <= '9' && *(s + i) >= '0') || (*(s + i) == ' ' || (*(s + i) == ' ') || (*(s + i) == '+')))
 			{
 				firmar = 1;
 			}
 		}
-		while (*(s+i) <= '9' && *(s+i) >= '0')
+		while (*(s + i) <= '9' && *(s + i) >= '0')
 		{ 
 			res *= 10;
-			res += (*(s+i) -48);
+			res += (*(s + i) - 48);
 			i++;
 		}
 		if (res != 0)

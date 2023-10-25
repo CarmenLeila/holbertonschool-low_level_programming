@@ -17,6 +17,6 @@ void print_array(int *a, int n)
 		if (!(b == (n - 1) || (*(a + b + 1) == '\0')))
 			printf(", ");
 		b++;
-		putchar('\n');
 	}
+	putchar('\n');
 }
