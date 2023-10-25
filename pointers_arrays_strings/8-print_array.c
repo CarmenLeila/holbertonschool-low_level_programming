@@ -19,5 +19,4 @@ void print_array(int *a, int n)
 		b++;
 		putchar('\n');
 	}
-	printf("\n");
 }
