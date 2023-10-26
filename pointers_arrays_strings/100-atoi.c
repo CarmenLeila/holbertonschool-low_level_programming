@@ -10,20 +10,16 @@
  */
 int _atoi(char *s)
 {
-	int firmar = 1;
+	int signe = 1;
 	int i = 0, res = 0;
 
 	while (*(s + i))
 	{
-		//while (si) == '-' )
-		while (*(s + i) == '-')
+		while (*(s + i) == '-' || *(s + i) == '+')
 		{
-			firmar *= -1;
+			if (*(s + i) == '-')
+			signe *= -1;
 			i++;
-			if (!((*(s + i) <= '9' && *(s + i) >= '0') || (*(s + i) == ' '|| (*(s + i) == ' ') || (*(s + i) == '+'))))
-			{
-				firmar = 1;
-			}
 		}
 		while (*(s + i) <= '9' && *(s + i) >= '0')
 		{
@@ -33,7 +29,7 @@ int _atoi(char *s)
 		}
 		if (res != 0)
 		{
-			return (res * firmar);
+			return (res * signe);
 		}
 		i++;
 	}
