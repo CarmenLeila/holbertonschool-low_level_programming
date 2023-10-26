@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _atoi -  convert a string to an integer
+ * _atoi - convert a string to an integer
  *
  * @s: is a string that's gonna be converted
  *
@@ -11,7 +11,7 @@
 int _atoi(char *s)
 {
 	int firmar = 1;
-	int i = 0, res = 0;
+	unsigned int i = 0, res = 0;
 
 	while (*(s + i))
 	{
@@ -19,7 +19,7 @@ int _atoi(char *s)
 		{
 			firmar *= -1;
 			i++;
-			if (!((*(s + i) <= '9' && *(s + i) >= '0') || (*(s + i) == ' ' || (*(s + i) == ' ') || (*(s + i) == '+')))
+			if (!((*(s + i) <= '9' && *(s + i) >= '0') || (*(s + i) == ' '|| (*(s + i) == ' ') || (*(s + i) == '+')))
 			{
 				firmar = 1;
 			}
