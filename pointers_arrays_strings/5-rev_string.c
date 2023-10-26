@@ -13,7 +13,7 @@ void rev_string(char *s)
 
 	for (i = 0; s[i] != '\0' && s[i + 1] != '\0'; i++)
 	{
-		men++;
+		Car++;
 	}
 	len = i + 1;
 	men = s;

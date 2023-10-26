@@ -11,15 +11,16 @@
 int _atoi(char *s)
 {
 	int firmar = 1;
-	unsigned int i = 0, res = 0;
+	int i = 0, res = 0;
 
 	while (*(s + i))
 	{
+		//while (si) == '-' )
 		while (*(s + i) == '-')
 		{
 			firmar *= -1;
 			i++;
-			if (!((*(s + i) <= '9' && *(s + i) >= '0') || (*(s + i) == ' '|| (*(s + i) == ' ') || (*(s + i) == '+')))
+			if (!((*(s + i) <= '9' && *(s + i) >= '0') || (*(s + i) == ' '|| (*(s + i) == ' ') || (*(s + i) == '+'))))
 			{
 				firmar = 1;
 			}
