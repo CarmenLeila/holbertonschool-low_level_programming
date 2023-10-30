@@ -12,12 +12,12 @@ void _puts_recursion(char *s)
 
 	if (*(s + i))
 	{
-		_putchar(*(s + i));
+		putchar(*(s + i));
 		i++;
 		_puts_recursion(s + i);
 	}
 	else
 	{
-		_putchar('\n');
+		putchar('\n');
 	}
 }
