@@ -23,7 +23,7 @@ int is_prime_number(int n)
  *
  * @a: integer value
  *
- * Return: integer 
+ * Return: integer
  */
 int check_division(int n, int a)
 {
