@@ -15,7 +15,6 @@ int main(int argc __attribute__((unused)), char *argv[])
 		result *= atoi(*(argv + i));
 		i++;
 	}
-	
 	if (i <= 2)
 	{
 		printf("Error\n");
