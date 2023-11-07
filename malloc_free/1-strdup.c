@@ -3,21 +3,33 @@
 #include <stdlib.h>
 
 /**
- * main - check the code
+ *  _strdup -  returns a pointer to a newly allocated space in memory
  *
- * Return: Always 0.
+ * @str: a string value
+ *
+ *  Return: a string value
  */
-int main(void)
+char *_strdup(char *str)
 {
-	char *s;
+	unsigned int i = 0;
+	char *copy;
 
-	s = _strdup("Duplicated");
-	if (s == NULL)
+	while (*(str + i))
 	{
-		printf("failed to allocate memory\n");
-		return (1);
+		i++;
 	}
-	printf("%s\n", s);
-	free(s);
-	return (0);
+	copy = malloc(sizeof(char) * (i + 1));
+	
+	if (copy == NULL)
+		return (NULL);
+	i = 0;
+	
+	while (*(str + i))
+	{
+		*(copy + i) = *(str + i);
+		i++;
+	}
+	*(copy + i) = '\0';
+	
+	return (copy);
 }
