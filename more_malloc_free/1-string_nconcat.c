@@ -11,51 +11,37 @@ unsigned int _length(char *str);
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, s1_length = 0, s2_length = 0;
+	unsigned int i = 0, j = 0, a = 0, b = 0;
 	char *copy;
 
 	if (s1 == NULL)
-		*s1 = '\0';
+		s1 = "";
 	if (s2 == NULL)
-		*s2 = '\0';
-	s1_length = _length(s1);
-	s2_length = _length(s2);
-	if (n < s2_length)
-		s2_length = n;
+		s2 = "";
+	while (s1[i])
+		i++;
+	while (s2[a])
+		a++;
+	if (n >= a)
+		b = i + a;
+	else
+		b = i + n;
 
-	copy = malloc(sizeof(char) * (s1_length + s2_length + 1));
+	copy = malloc(sizeof(char) * b + 1);
 	if (copy == NULL)
 		return (NULL);
-
-	while (*(s1 + i))
+	a = 0;
+	while (j < b)
 	{
-		*(copy + i) = *(s1 + i);
-		i++;
+		if (j <= i)
+			copy[j] = s1[j];
+		if (j >= i)
+		{
+			copy[j] = s2[j];
+			a++;
+		}
+		j++;
 	}
-	while (*(s2 + i - s1_length) && ((i - s1_length) < n))
-	{
-		*(copy + i) = *(s2 + i - s1_length);
-		i++;
-	}
-	*(copy + i) = '\0';
+	copy[j] = '\0';
 	return (copy);
-}
-
-/**
- * _length - function which is used in the code
- * @str: a string pointer
- * Return: an unsigned int
- */
-unsigned int _length(char *str)
-{
-	unsigned int i = 0;
-
-	if (str == NULL)
-		return (0);
-
-	while (*(str + i))
-	{
-		i++;
-	}
-	return (i);
 }
