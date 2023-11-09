@@ -1,49 +1,61 @@
 #include <stdlib.h>
-#include "main.h"
+#include <string.h>
 
+unsigned int _length(char *str);
 /**
  * string_nconcat - concatenates two strings
- *
- * @s1: first string 
- * @s2: second string
+ * @s1: first parameter 
+ * @s2: second parameter
  * @n: an integer
- * Return: pointer to a newly allocated space in memory
+ * Return: pointer shall point to a newly allocated
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s3, *empt;
-	unsigned int m, len1, len2;
+	unsigned int i = 0, s1_length = 0, s2_length = 0;
+	char *copy;
 
-	empt = "";
 	if (s1 == NULL)
-		s1 = empt;
+		*s1 = '\0';
 	if (s2 == NULL)
-		s2 = empt;
-	m = len1 = len2 = 0;
-	while (s1[len1] != '\0')
-	{
-		len1++;
-	}
-	while (s2[len2] != '\0')
-	{
-		len2++;
-	}
-	len2++;
-	s3 = malloc((len1 + len2) * sizeof(*s1));
-	if (s3 == NULL)
+		*s2 = '\0';
+	s1_length = _length(s1);
+	s2_length = _length(s2);
+	if (n < s2_length)
+		s2_length = n;
+
+	copy = malloc(sizeof(char) * (s1_length + s2_length + 1));
+	if (copy == NULL)
 		return (NULL);
-			m = 0;
-			while (m < len1)
-			{
-				s3[m] = s1[m];
-				m++;
-			}
-			n = 0;
-			while (n <= len2)
-			{
-				s3[m] = s2[n];
-				m++;
-				n++;
-			}
-			return (s3);
-}
+
+	while (*(s1 + i))
+	{
+		*(copy + i) = *(s1 + i);
+		i++;
+	}
+	while (*(s2 + i - s1_length) && ((i - s1_length) < n))
+	{
+		*(copy + i) = *(s2 + i - s1_length);
+		i++;
+	}
+	*(copy + i) = '\0';
+	return (copy);
+}
+
+/**
+ * _length - function which is used in the code
+ * @str: a string pointer
+ * Return: an unsigned int
+ */
+unsigned int _length(char *str)
+{
+	unsigned int i = 0;
+
+	if (str == NULL)
+		return (0);
+
+	while (*(str + i))
+	{
+		i++;
+	}
+	return (i);
+}
