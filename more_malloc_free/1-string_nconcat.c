@@ -4,7 +4,7 @@
 unsigned int _length(char *str);
 /**
  * string_nconcat - concatenates two strings
- * @s1: first parameter 
+ * @s1: first parameter
  * @s2: second parameter
  * @n: an integer
  * Return: pointer shall point to a newly allocated
