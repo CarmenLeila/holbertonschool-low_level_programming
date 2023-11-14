@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
  * init_dog - initialize a variable of type struct dog
@@ -8,27 +9,45 @@
  * @age: my third parameter as a float
  * @owner: an other parameter as character
  */
-struct dog
-{
-	char name[25];
-	float age;
-	char owner[25];
-};
 void init_dog(struct dog *d, char *name, float age, char *owner)
-	{
-		malloc(d->name,name,sizeof(d->name)-1);
-		d->name[sizeof(d->name)-1] = '\0';
-		d->age = age;
-		malloc(d->owner,owner,sizeof(d->owner)-1);
-		d->owner[sizeof(d->owner)-1] = '\0';
-	}
-int main(void)
-	{
-		struct dog d;
-		init_dog(&d,"Boby",4,"Marc");
-		printf("Name: %s\n",d.name);
-		printf("Age: %d\n",d.age);
-		printf("Owner: %s\n",d.owner);
+{
+	unsigned int i = 0;
 
-		return 0;
+	while (*(name + i))
+	{
+		i++;
 	}
+
+	d->name = malloc(sizeof(char) * (i + 1));
+	if (d->name == NULL)
+	{
+		return;
+	}
+	i = 0;
+	while (*(name + i))
+	{
+		*(d->name + i) = *(name + i);
+		i++;
+	}
+	*(d->name + i) = '\0';
+
+	i = 0;
+	while (*(owner + i))
+	{
+		i++;
+	}
+	d->owner = malloc(sizeof(char) * (i + 1));
+	if (d->owner == NULL)
+	{
+		return;
+	}
+	i = 0;
+	while (*(owner + i))
+	{
+		*(d->owner + i) = *(owner + i);
+		i++;
+	}
+	*(d->owner + i) = '\0';
+
+	d->age = age;
+}
