@@ -1,10 +1,12 @@
 #include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
 
 /**
  * print_numbers - function that prints numbers
  * @separator: separator string
  * @n: number of numbers passed in parameter
- * Return: nothing
+ * Return: nothing at all
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -16,11 +18,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	while (i < n)
 	{
 		printf("%d", va_arg(numbers, int));
-		if ((i < (n - 1)) && (separator != NULL))
+		if (separator != NULL)
 		{
-			printf("%s ", separator);
+			if ((i < (n - 1)) && (*separator != '\0'))
+			{
+				printf("%s", separator);
+			}
 		}
-		i++;
+		++i;
 	}
 	va_end(numbers);
 	printf("\n");
