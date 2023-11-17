@@ -6,8 +6,7 @@
  * @n: number of numbers passed in parameter
  * Return: nothing
  */
-void print_numbers(const char *separator,
-		const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
 	va_list numbers;
@@ -17,9 +16,12 @@ void print_numbers(const char *separator,
 	while (i < n)
 	{
 		printf("%d", va_arg(numbers, int));
-		if ((i < (n - 1)) && separator != NULL)
+		if (separator != NULL)
 		{
-			printf("%s ", separator);
+			if ((i < (n - 1)) && (*separator != 0))
+			{
+				printf("%s ", separator);
+			}
 		}
 		i++;
 	}
