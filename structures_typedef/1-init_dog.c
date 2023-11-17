@@ -1,5 +1,6 @@
 #include "dog.h"
 
+char *_copy(char *str);
 /**
  * init_dog - function that initialize a dog structure
  * @d: the dog structure
@@ -9,43 +10,39 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-unsigned int i = 0;
-
-while (*(name + i))
+if (d != NULL)
 {
-i++;
-}
-
-d->name = malloc(sizeof(char) * (i + 1));
-if (d->name == NULL)
-{
-return;
-}
-i = 0;
-while (*(name + i))
-{
-*(d->name + i) = *(name + i);
-i++;
-}
-*(d->name + i) = 0;
-
-i = 0;
-while (*(owner + i))
-{
-i++;
-}
-d->owner = malloc(sizeof(char) * (i + 1));
-if (d->owner == NULL)
-{
-return;
-}
-i = 0;
-while (*(owner + i))
-{
-*(d->owner + i) = *(owner + i);
-i++;
-}
-*(d->owner + i) = 0;
-
+d->name = _copy(name);
 d->age = age;
+d->owner = _copy(owner);
+}
+}
+
+/**
+ * _copy - function
+ * @str: string
+ * Return: a string
+ */
+char *_copy(char *str)
+{
+unsigned int i = 0, len = 0;
+char *copy;
+
+while (*(str + len))
+{
+len++;
+}
+
+copy = malloc(sizeof(char) * (len + 1));
+if (copy == NULL)
+return (NULL);
+
+while (*(str + i))
+{
+*(copy + i) = *(str + i);
+i++;
+}
+*(copy + i) = 0;
+
+return (copy);
 }
