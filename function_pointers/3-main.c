@@ -1,14 +1,11 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
-  * main - function that is used in the program
-  * @argc: my first parameter as an int
-  * @argv: my second parameter as a charater
-  *
-  * Return: an integer
-  */
+ * main - test the code
+ * @argc: integer
+ * @argv: arguments arrays
+ * Return: integer
+ */
 int main(int argc, char *argv[])
 {
 	int a, b, result;
