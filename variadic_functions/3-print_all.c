@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 
 	va_start(argv, format);
 
-	while ((format + i) != NULL)
+	while ((formats + i) != NULL)
 	{
 
 		if (i != 0)
@@ -32,9 +32,10 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
+
 /**
- * print_int - function that prints integers
- * @a: an int
+ * print_int - function
+ * @a: a int
  * Return: Nothing
  */
 void print_int(int a)
@@ -43,7 +44,7 @@ void print_int(int a)
 }
 
 /**
- * print_float - function that prints float
+ * print_float - function
  * @s: a float number
  * Return: Nothing
  */
@@ -53,7 +54,7 @@ void print_float(float a)
 }
 
 /**
- * print_char - function that prints characters
+ * print_char - function
  * @a: a char
  * Return: Nothing
  */
@@ -63,7 +64,7 @@ void print_char(char a)
 }
 
 /**
- * print_string - function that prints strings
+ * print_string - function
  * @s: a string
  * Return: Nothing
  */
