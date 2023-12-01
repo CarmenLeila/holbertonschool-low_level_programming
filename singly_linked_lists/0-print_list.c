@@ -4,8 +4,8 @@
 size_t show_list(const list_t *, const list_t *);
 
 /**
- * print_list - function that prints all the elements of a list_t list
- * @h: is a linked list of type list_t to print
+ * print_list - prints all the elements of a list_t list
+ * @h: a list given in parameter
  * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
@@ -27,7 +27,7 @@ size_t print_list(const list_t *h)
 }
 
 /**
- * show_list - function that shows a linked list
+ * show_list - shows a linked list
  * @head: head node
  * @list: a list to print
  * Return: nothing
