@@ -1,50 +1,53 @@
 #include "main.h"
 
+size_t _length(char *str);
+
 /**
- * _length - computes the length of a string.
- * @str: input string
- * Return: is the length of the string, -1 if the input is NULL
+ * create_file - function to create file
+ * @filename: file name
+ * @text_content: the text to inter
+ * Return: 1(success) and -1 for fail
  */
-ssize_t _length(const char *str)
-{
-	ssize_t size = 0;
-
-	if (str == NULL)
-	return (-1);
-
-	while (str[size] != '\0')
-	size++;
-	return (size);
-}
-
-/**
- * create_file - is a function that creates a file
- * filename: is a file to create
- * text_content:  is a NULL terminated string to write to the file
- * Return: 1 on success, -1 on failure
-*/
 int create_file(const char *filename, char *text_content)
 {
-	int file_d = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-	ssize_t write_result;
+	int file_d;
+	ssize_t wrote_letters;
 
 	if (filename == NULL)
-	{
-	return (-1);
-	}
+		return (-1);
+
+	file_d = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (file_d == -1)
-	{
-	return (-1);
-	}
+		return (-1);
+
 	if (text_content != NULL)
-	{
-		write_result = write(file_d, text_content, _length(text_content));
-	if (write_result == -1)
+		wrote_letters = write(file_d, text_content, _length(text_content));
+	else
+		wrote_letters = write(file_d, "", 0);
+
+	if (wrote_letters == -1)
 	{
 		close(file_d);
 		return (-1);
 	}
-	}
-	close(file_d);
+
 	return (1);
+}
+
+/**
+ * _length - function
+ * @str: a string value
+ * Return: a size of @str
+ */
+size_t _length(char *str)
+{
+	size_t size = 0;
+
+	if (str == NULL)
+		return (0);
+
+	while (*(str + size) != '\0')
+		size++;
+
+	return  (size);
 }
